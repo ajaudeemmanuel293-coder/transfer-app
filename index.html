@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Wallet Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-container">
+        <!-- App Top Bar -->
+        <div class="app-header">
+            <div class="top-nav">
+                <span class="user-welcome">Hello, Sandbox User</span>
+                <span class="badge">Verified</span>
+            </div>
+            <div class="balance-card">
+                <p>Total Balance</p>
+                <h1 id="balance-display">₦1,000,000,000.00</h1>
+            </div>
+        </div>
+
+        <!-- Form Options -->
+        <div class="app-body">
+            <h3 class="section-title">Transfer to Bank</h3>
+            
+            <div class="input-group">
+                <label>Select Bank</label>
+                <select id="bank-select">
+                    <option value="">Choose beneficiary bank</option>
+                    <option value="OPay Digital Services">OPay</option>
+                    <option value="PalmPay Limited">PalmPay</option>
+                    <option value="Moniepoint MFB">Moniepoint</option>
+                    <option value="Access Bank">Access Bank</option>
+                    <option value="GTBank">GTBank</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Account Number</label>
+                <input type="text" id="account-number" placeholder="Enter 10-digit account number" maxlength="10">
+            </div>
+
+            <div class="input-group">
+                <label>Recipient Name</label>
+                <input type="text" id="recipient" placeholder="Recipient account name">
+            </div>
+
+            <div class="input-group">
+                <label>Amount (₦)</label>
+                <input type="number" id="amount" placeholder="0.00" min="1">
+            </div>
+
+            <button id="transfer-btn" onclick="executeTransfer()">Next</button>
+            <p id="error-message" class="error"></p>
+        </div>
+
+        <!-- Receipt Sheet Overlay -->
+        <div id="success-modal" class="modal hidden">
+            <div class="receipt-card">
+                <div class="status-header">
+                    <div class="check-circle">✓</div>
+                    <h2>Transaction Successful</h2>
+                    <h1 id="receipt-amount">₦0.00</h1>
+                </div>
+                
+                <div class="receipt-details">
+                    <div class="detail-row">
+                        <span class="label">Transaction Type</span>
+                        <span class="value" id="receipt-type">Transfer to Bank</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Bank Name</span>
+                        <span class="value" id="receipt-bank">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Account Number</span>
+                        <span class="value" id="receipt-account">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Recipient Name</span>
+                        <span class="value" id="receipt-recipient">-</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Transaction Date</span>
+                        <span class="value" id="receipt-time">-</span>
+                    </div>
+                    <div class="detail-row border-none">
+                        <span class="label">Transaction ID</span>
+                        <span class="value serial-text" id="receipt-session">-</span>
+                    </div>
+                </div>
+
+                <button class="close-btn" onclick="closeModal()">Share Receipt</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

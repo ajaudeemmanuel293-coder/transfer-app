@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.phone-container {
+    background: #f8fafc;
+    width: 375px;
+    height: 750px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.app-header {
+    background: #00B87B; /* App specific vibrant green theme color */
+    color: white;
+    padding: 25px 20px 35px 20px;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.user-welcome {
+    font-size: 15px;
+    font-weight: 500;
+}
+.badge {
+    font-size: 11px;
+    background: rgba(255,255,255,0.25);
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+.balance-card p {
+    font-size: 12px;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+.balance-card h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.app-body {
+    background: white;
+    margin-top: -15px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 24px 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+.section-title {
+    font-size: 16px;
+    color: #111827;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.input-group {
+    margin-bottom: 16px;
+}
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9fafb;
+    outline: none;
+    color: #1f2937;
+}
+.input-group input:focus, .input-group select:focus {
+    border-color: #00B87B;
+    background-color: white;
+}
+#transfer-btn {
+    width: 100%;
+    padding: 14px;
+    background: #00B87B;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Pill design button shape */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#transfer-btn:hover { background: #009d68; }
+.error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 12px;
+    text-align: center;
+}
+.modal {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Slide up tray appearance template style */
+}
+.hidden { display: none !important; }
+.receipt-card {
+    background: white;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 24px 20px;
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+}
+.status-header {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.check-circle {
+    width: 48px;
+    height: 48px;
+    background: #00B87B;
+    color: white;
+    font-size: 24px;
+    line-height: 48px;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+}
+.status-header h2 { font-size: 15px; color: #00B87B; font-weight: 600; }
+.status-header h1 { font-size: 28px; color: #111827; margin-top: 6px; font-weight: 700; }
+.receipt-details {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 13px;
+}
+.detail-row.border-none { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.detail-row .label { color: #6b7280; }
+.detail-row .value { color: #111827; font-weight: 500; text-align: right; }
+.serial-text { font-family: Courier, monospace; font-size: 12px; }
+.close-btn {
+    width: 100%;
+    padding: 14px;
+    background: #00B87B;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
