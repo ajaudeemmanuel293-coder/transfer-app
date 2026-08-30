@@ -1,0 +1,30 @@
+{
+  "name": "transfer-app",
+  "version": "1.0.0",
+  "description": "Fintech Wallet Sandbox - A demo transfer application with Vercel Web Analytics",
+  "main": "script.js",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaudeemmanuel293-coder/transfer-app.git"
+  },
+  "keywords": [
+    "fintech",
+    "wallet",
+    "demo",
+    "transfer",
+    "analytics"
+  ],
+  "author": "ajaudeemmanuel293",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajaudeemmanuel293-coder/transfer-app/issues"
+  },
+  "homepage": "https://github.com/ajaudeemmanuel293-coder/transfer-app#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
